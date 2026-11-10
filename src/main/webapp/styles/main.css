@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 32px 24px;
+}
+h1, h2 { color: teal; }
+h1 { font-size: 26px; }
+h2 { font-size: 22px; margin: 20px 0 12px; }
+p { line-height: 1.4; }
+.info label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+.info input {
+    width: 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    padding: 3px;
+}
+input, select { font: inherit; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #bbb; padding: 8px; text-align: left; overflow-wrap: anywhere; }
+a { color: teal; }

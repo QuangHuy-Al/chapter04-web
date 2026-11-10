@@ -1,0 +1,13 @@
+.git
+.github
+.idea
+.smarttomcat
+.mvn
+target
+out
+build
+*.iml
+*.log
+.env
+.env.*
+README.md
