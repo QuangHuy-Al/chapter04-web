@@ -1,6 +1,10 @@
 package com.example.model;
 
-public class Survey {
+import java.io.Serializable;
+
+public class Survey implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final String firstName;
     private final String lastName;
     private final String email;

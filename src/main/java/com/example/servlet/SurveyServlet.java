@@ -1,6 +1,5 @@
 package com.example.servlet;
 
-import com.example.dto.SurveyDTO;
 import com.example.model.Survey;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -51,8 +50,7 @@ public class SurveyServlet extends HttpServlet {
             request.getRequestDispatcher("/survey-result.jsp").forward(request, response);
             return;
         }
-        SurveyDTO surveyDTO = new SurveyDTO(survey);
-        request.getSession().setAttribute("survey", surveyDTO);
+        request.getSession().setAttribute("survey", survey);
         response.sendRedirect(response.encodeRedirectURL(
                 request.getContextPath() + "/survey-result.jsp"));
     }
