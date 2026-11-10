@@ -16,8 +16,8 @@ public class PageCacheFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        String path = ((HttpServletRequest) request).getRequestURI();
-        if (path.endsWith("/") || path.endsWith(".html") || path.endsWith(".jsp")) {
+        String path = ((HttpServletRequest) request).getServletPath();
+        if (path.isEmpty() || path.endsWith("/") || path.endsWith(".html") || path.endsWith(".jsp")) {
             ((HttpServletResponse) response).setHeader("Cache-Control", "no-store");
         }
         chain.doFilter(request, response);
